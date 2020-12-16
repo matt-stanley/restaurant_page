@@ -1,0 +1,54 @@
+body {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Lato', sans-serif;
+}
+
+.hero-section {
+  position: relative;
+  background-image: url("../img/margherita.jpg");
+  background-position: top center;
+  background-size: cover;
+  height: 600px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.2em;
+  font-style: italic;
+  color: antiquewhite;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.luigi {
+  font-family: 'Satisfy';
+  font-size: 3em;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+}
+
+/* .gray-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.4);
+} */
