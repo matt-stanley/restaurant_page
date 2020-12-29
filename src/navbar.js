@@ -27,12 +27,12 @@ export default function displayNav() {
   navBar.appendChild(navHome);
   navBar.appendChild(navHistory);
   navBar.appendChild(navReservations);
-  
+
   body.prepend(navBar);
   body.prepend(burgerButton);
 }
 
-export function toggleNav() {
+function toggleNav() {
   const navBar = document.querySelector('#main-nav');
   if (navBar) {
     navBar.classList.toggle('nav-visible');

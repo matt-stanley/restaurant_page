@@ -1,6 +1,6 @@
 export default function displayHomepage() {
   const container = document.querySelector('#content');
-
+  container.innerHTML = '';
   container.appendChild(createHeader());
   container.appendChild(createOverview());
 }

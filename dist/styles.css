@@ -6,6 +6,20 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+.footer {
+  height: 4em;
+  background: black;
+  color: antiquewhite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  font-size: 1rem;
+}
+
 .hero-section {
   position: relative;
   background-image: url("../img/margherita.jpg");
@@ -110,12 +124,12 @@ body {
 }
 
 .overview-description {
-  padding: 25px;
+  padding: 30px;
   margin: 0;
   font-size: 1.2rem;
   line-height: 2rem;
 
-  background: wheat;
+  background: #eee;
 }
 
 .overview-img {
