@@ -1,11 +1,12 @@
 export default function displayHomepage() {
   const container = document.querySelector('#content');
 
+  container.appendChild(createHeader());
+}
+
+function createHeader() {
   const header = document.createElement('header');
   header.classList.add('hero-section');
-
-  const grayOverlay = document.createElement('div');
-  grayOverlay.classList.add('gray-overlay');
 
   const title = document.createElement('h1');
   title.classList.add('hero-title');
@@ -15,7 +16,7 @@ export default function displayHomepage() {
   luigi.textContent = "Luigi's"
 
   const pizzaClassica = document.createElement('span');
-  pizzaClassica.textContent = "Pizza Classica";
+  pizzaClassica.textContent = "Pizzeria Classica";
 
   const subtitle = document.createElement('h2');
   subtitle.classList.add('hero-subtitle');
@@ -25,9 +26,7 @@ export default function displayHomepage() {
   title.appendChild(pizzaClassica);
   title.appendChild(subtitle);
 
-  header.appendChild(grayOverlay);
   header.appendChild(title);
-  
 
-  container.appendChild(header);
+  return header;
 }

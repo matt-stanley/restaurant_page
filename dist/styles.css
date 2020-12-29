@@ -43,12 +43,103 @@ body {
   font-size: 1rem;
 }
 
-/* .gray-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.burger-btn {
+  position: fixed;
+  top: 0px;
+  border: none;
+  height: 70px;
+  width: 70px;
 
-  background: rgba(0, 0, 0, 0.4);
-} */
+  background: url('../img/icons/menu-white-18dp.svg'), black;
+  background-size: cover;
+
+  z-index: 2;
+}
+
+.main-nav {
+  position: fixed;
+  top: 70px;
+  left: -200px;
+  display: flex;
+  flex-direction: column;
+
+  z-index: 2;
+
+  overflow: hidden;
+  transition: left 0.5s ease;
+}
+
+.nav-visible {
+  left: 0;
+}
+
+.nav-btn {
+  background: black;
+  color: antiquewhite;
+  padding: 15px 30px;
+
+  font-size: 1.2em;
+  line-height: 1.2em;
+
+  cursor: pointer;
+  transition: all 0.03s;
+}
+
+.nav-btn:hover, .nav-btn:active {
+  border-bottom: 5px solid rgb(218, 85, 62);
+}
+
+.reservations-btn {
+  background: rgb(218, 85, 62);
+}
+
+.nav-btn.reservations-btn:hover, .nav-btn.reservations-btn:active {
+  background: antiquewhite;
+  color:rgb(218, 85, 62);
+  border: none;
+}
+
+@media screen and (min-width: 1100px) {
+  .burger-btn {
+    display: none;
+  }
+
+  .main-nav {
+    position: fixed;
+    top: 15px;
+    left: auto;
+    height: 50px;
+  
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+  
+    z-index: 2;
+  }
+  
+  .nav-btn {
+    background: black;
+    color: antiquewhite;
+    padding: 15px 30px;
+  
+    font-size: 1.2em;
+    line-height: 1.2em;
+  
+    cursor: pointer;
+    transition: all 0.03s;
+  }
+  
+  .nav-btn:hover, .nav-btn:active {
+    border-bottom: 5px solid rgb(218, 85, 62);
+  }
+  
+  .reservations-btn {
+    background: rgb(218, 85, 62);
+  }
+  
+  .nav-btn.reservations-btn:hover, .nav-btn.reservations-btn:active {
+    background: antiquewhite;
+    color:rgb(218, 85, 62);
+    border: none;
+  }
+}
