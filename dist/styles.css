@@ -99,6 +99,30 @@ body {
   border: none;
 }
 
+.overview-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-description {
+  padding: 25px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+  background: wheat;
+}
+
+.overview-img {
+  max-width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 1100px) {
   .burger-btn {
     display: none;
@@ -143,3 +167,4 @@ body {
     border: none;
   }
 }
+
