@@ -99,7 +99,7 @@ body {
   transition: all 0.03s;
 }
 
-.nav-btn:hover, .nav-btn:active {
+.nav-btn:hover, .nav-btn:active, .nav-current {
   border-bottom: 5px solid rgb(218, 85, 62);
 }
 
