@@ -17,21 +17,19 @@ export default function displayNav(current = 'home') {
   navHome.classList.add('nav-btn');
   navHome.classList.add('nav-current');
   navHome.addEventListener('click', DOM.displayHomepage);
-  navHome.textContent = "Home";
+  navHome.textContent = "Fart";
 
   const navHistory = document.createElement('button');
-  navHome.setAttribute('id', 'nav-home');
+  navHistory.setAttribute('id', 'nav-history');
   navHistory.classList.add('nav-btn');
-  navHome.addEventListener('click', DOM.displayHistory);
+  navHistory.addEventListener('click', DOM.displayHistory);
   navHistory.textContent = "History";
 
   const navReservations = document.createElement('button');
+  navReservations.setAttribute('id', 'nav-reservations');
   navReservations.classList.add('nav-btn');
   navReservations.classList.add('reservations-btn');
   navReservations.textContent = "Reservations";
-
-  unsetCurrentNavButton();
-  setCurrentNavButton(current);
 
   navBar.appendChild(navHome);
   navBar.appendChild(navHistory);
@@ -42,11 +40,12 @@ export default function displayNav(current = 'home') {
 }
 
 function unsetCurrentNavButton() {
-  currentNavButton = document.querySelector('.nav-current');
-  currentNavButton.classList.remove('nav-current');
+  let currentNavButton = document.querySelector('.nav-current');
+  if(currentNavButton) {currentNavButton.classList.remove('nav-current');}
 }
 
-function setCurrentNavButton(current) {
+export function setCurrentNavButton(current) {
+  unsetCurrentNavButton();
 
   let button;
 
@@ -64,7 +63,7 @@ function setCurrentNavButton(current) {
       break;
   }
 
-  button.classList.add('nav-current');
+  if (button) {button.classList.add('nav-current')};
 }
 
 function toggleNav() {
