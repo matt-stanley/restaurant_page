@@ -17,7 +17,7 @@ export default function displayNav(current = 'home') {
   navHome.classList.add('nav-btn');
   navHome.classList.add('nav-current');
   navHome.addEventListener('click', DOM.displayHomepage);
-  navHome.textContent = "Fart";
+  navHome.textContent = "Home";
 
   const navHistory = document.createElement('button');
   navHistory.setAttribute('id', 'nav-history');
@@ -27,6 +27,7 @@ export default function displayNav(current = 'home') {
 
   const navReservations = document.createElement('button');
   navReservations.setAttribute('id', 'nav-reservations');
+  navReservations.addEventListener('click', DOM.displayReservations);
   navReservations.classList.add('nav-btn');
   navReservations.classList.add('reservations-btn');
   navReservations.textContent = "Reservations";

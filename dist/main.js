@@ -157,6 +157,57 @@ function history_createOverview() {
 
   return overviewContainer;
 }
+;// CONCATENATED MODULE: ./src/reservations.js
+function reservations_createHeader() {
+  const header = document.createElement('header');
+  header.classList.add('hero-section');
+
+  const title = document.createElement('h1');
+  title.classList.add('hero-title');
+
+  const luigi = document.createElement('span');
+  luigi.classList.add('luigi');
+  luigi.textContent = "Luigi's"
+
+  const historia = document.createElement('span');
+  historia.classList.add('historia');
+  historia.textContent = "Reservations";
+
+  title.appendChild(luigi);
+  title.appendChild(historia);
+
+  header.appendChild(title);
+
+  return header;
+}
+
+function createResInfo() {
+  const reservationContainer = document.createElement('div');
+  reservationContainer.classList.add('res-container');
+
+  const reservationHeader = document.createElement('h3');
+  reservationHeader.classList.add('res-header');
+  reservationHeader.textContent = 'Contact us to make a reservation.'
+
+  const contactBox = document.createElement('div');
+  contactBox.classList.add('contact-box');
+
+  const phoneSection = document.createElement('div');
+  phoneSection.classList.add('contact-section');
+  phoneSection.textContent = '555-555-4869'
+
+  const emailSection = document.createElement('div');
+  emailSection.classList.add('contact-section');
+  emailSection.textContent = 'helperino@luigis.com';
+
+  contactBox.appendChild(phoneSection);
+  contactBox.appendChild(emailSection);
+
+  reservationContainer.appendChild(reservationHeader);
+  reservationContainer.appendChild(contactBox);
+
+  return reservationContainer;
+}
 ;// CONCATENATED MODULE: ./src/navbar.js
 
 
@@ -177,7 +228,7 @@ function displayNav(current = 'home') {
   navHome.classList.add('nav-btn');
   navHome.classList.add('nav-current');
   navHome.addEventListener('click', displayHomepage);
-  navHome.textContent = "Fart";
+  navHome.textContent = "Home";
 
   const navHistory = document.createElement('button');
   navHistory.setAttribute('id', 'nav-history');
@@ -187,6 +238,7 @@ function displayNav(current = 'home') {
 
   const navReservations = document.createElement('button');
   navReservations.setAttribute('id', 'nav-reservations');
+  navReservations.addEventListener('click', displayReservations);
   navReservations.classList.add('nav-btn');
   navReservations.classList.add('reservations-btn');
   navReservations.textContent = "Reservations";
@@ -238,6 +290,7 @@ function toggleNav() {
 
 
 
+
 const container = document.querySelector('#content');
 
 function clearContent() {
@@ -248,7 +301,6 @@ function displayHomepage() {
   clearContent();
   container.appendChild(createHeader());
   container.appendChild(createOverview());
-
   setCurrentNavButton('home');
 }
 
@@ -257,6 +309,13 @@ function displayHistory() {
   container.appendChild(history_createHeader());
   container.appendChild(history_createOverview());
   setCurrentNavButton('history');
+}
+
+function displayReservations() {
+  clearContent();
+  container.appendChild(reservations_createHeader());
+  container.appendChild(createResInfo());
+  setCurrentNavButton('reservations');
 }
 ;// CONCATENATED MODULE: ./src/footer.js
 function displayFooter() {

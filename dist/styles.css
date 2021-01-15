@@ -10,8 +10,9 @@ button {
   border: none;
 }
 
-.content {
+#content {
   background: #d6d6d6;
+  /* min-height: 1200px; */
 }
 
 .footer {
@@ -145,6 +146,24 @@ button {
 .headshot {
   height: auto;
   width: 100%;
+}
+
+.res-container {
+  padding: 100px 0;
+}
+
+.res-header {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.contact-box {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.contact-section {
+  padding: 20px;
 }
 
 @media screen and (min-width: 1100px) {
