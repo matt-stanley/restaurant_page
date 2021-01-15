@@ -1,3 +1,5 @@
+import * as DOM from './DOM';
+
 export default function displayNav(current = 'home') {
   const body = document.querySelector('body');
 
@@ -10,18 +12,20 @@ export default function displayNav(current = 'home') {
   navBar.classList.add('main-nav');
   navBar.id = 'main-nav';
 
-  const navHome = document.createElement('a');
+  const navHome = document.createElement('button');
   navHome.setAttribute('id', 'nav-home');
   navHome.classList.add('nav-btn');
   navHome.classList.add('nav-current');
+  navHome.addEventListener('click', DOM.displayHomepage);
   navHome.textContent = "Home";
 
-  const navHistory = document.createElement('a');
+  const navHistory = document.createElement('button');
   navHome.setAttribute('id', 'nav-home');
   navHistory.classList.add('nav-btn');
+  navHome.addEventListener('click', DOM.displayHistory);
   navHistory.textContent = "History";
 
-  const navReservations = document.createElement('a');
+  const navReservations = document.createElement('button');
   navReservations.classList.add('nav-btn');
   navReservations.classList.add('reservations-btn');
   navReservations.textContent = "Reservations";

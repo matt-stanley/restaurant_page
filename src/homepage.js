@@ -1,11 +1,5 @@
-export default function displayHomepage() {
-  const container = document.querySelector('#content');
-  container.innerHTML = '';
-  container.appendChild(createHeader());
-  container.appendChild(createOverview());
-}
 
-function createHeader() {
+export function createHeader() {
   const header = document.createElement('header');
   header.classList.add('hero-section');
 
@@ -32,7 +26,7 @@ function createHeader() {
   return header;
 }
 
-function createOverview() {
+export function createOverview() {
   const overviewContainer = document.createElement('div');
   overviewContainer.classList.add('overview-container');
 
